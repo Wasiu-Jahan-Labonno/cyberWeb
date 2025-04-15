@@ -47,7 +47,13 @@
 	<script src="vanta.net.min.js"></script>
 
 
-
+<script>
+	window.addEventListener('load', function () {
+			setTimeout(() => {
+				document.querySelector('.preloader').style.display = 'none';
+			}, 500); // You can shorten the time if needed
+		});
+	</script>
 
 	<style>
 		#home {
@@ -63,8 +69,10 @@
 <body data-spy="scroll" data-offset="80">
 
 	<!-- START PRELOADER -->
-	<div class="preloaders">
-		<span class="loader"></span>
+	<div class="preloader">
+		<div class="logo-wrapper">
+			<img src="assets/img/loader.png" alt="Loading..." class="preloader-logo" />
+		</div>
 	</div>
 	<!-- END PRELOADER -->
 	
