@@ -10,9 +10,9 @@ Version      : 1.0
 	
 		/*PRELOADER JS*/
 		$(window).on('load', function() { 
-			setTimeout(function(){
-				$('.preloaders').fadeToggle();
-			}, 1500);
+			setTimeout(function () {
+				$('.preloaders').fadeOut('fast');
+			}, 100);
 		}); 
 		/*END PRELOADER JS*/		
 		
