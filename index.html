@@ -51,7 +51,7 @@
 	window.addEventListener('load', function () {
 			setTimeout(() => {
 				document.querySelector('.preloader').style.display = 'none';
-			}, 100); // You can shorten the time if needed
+			}, 500); // You can shorten the time if needed
 		});
 	</script>
 
@@ -71,7 +71,7 @@
 	<!-- START PRELOADER -->
 	<div class="preloader">
 		<div class="logo-wrapper">
-			<img src="assets/img/loader.png" alt="Loading..." class="preloader-logo" />
+			<img src="assets/img/logo.png" alt="Loading..." class="preloader-logo" />
 		</div>
 	</div>
 	<!-- END PRELOADER -->
@@ -101,7 +101,7 @@
 							<li><a href="#about">About Event</a>
 
 							</li>
-							<li><a href="#service">Services</a>
+							<li><a href="#Event">Event</a>
 
 							</li>
 							<li><a href="#EventSchedule">Schedule</a>
@@ -129,7 +129,7 @@
 					<li><a href="#about">About EVENT</a>
 
 					</li>
-					<li><a href="#service">service</a></li>
+					<li><a href="#Event">Event</a></li>
 
 					<li><a href="#EventSchedule">Event Schedule</a>
 
@@ -321,18 +321,41 @@
 	<!-- END ABOUT US  -->
 
 	<!-- START SERVICE -->
-	<section id="service" class="service_area section-padding"
+	<section id="Event" class="service_area section-padding"
 		style="background-color: rgb(1, 6, 32);  background-size:cover; background-position: center center;">
 		<div class="container">
 		
 				<h1 class="title2 ">
-					<span class="aurora-text">OUR SERVICE</span>
+					<span class="aurora-text">OUR Event</span>
 				</h1>
 
 			
 			<div class="gradient-line"></div>
+
+		<div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+				<div class=" col-sm-12 col-xs-12 wow fadeInUp myDis" data-wow-duration="1s" data-wow-delay="0.2s"
+					data-wow-offset="0">
+					<div class="single_service">
+						<div class="card">
+							<img src="assets/img/about1.png" alt="CTF">
+							<div class="card-content">
+								<h3>CTF</h3>
+								<div class="info"><i class="fa-regular fa-calendar-days"></i> May 26, 2025</div>
+								<div class="info"><i class="fa-solid fa-clock"></i> (10:00 AM – 4:00 PM)</div>
+								<div class="info"><i class="fa-solid fa-location-dot"></i> UAP Main Campus</div>
+								<div class="desc">Test your hacking skills in our flagship CTF competition with
+									challenging web, crypto,
+									forensics, and pwn challenges.</div>
+								<a href="#form" class="btn">Registration</a>
+							</div>
+						</div>
+			
+					</div>
+				</div>
+				</div>
+			<h3 style="text-align: center;">Seminars</h3>
 			<div class="row mt-5">
-				<!-- <div class=" col-lg-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
+				<div class=" col-lg-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
 					data-wow-offset="0">
 					<div class="single_service">
 						<div class="card">
@@ -350,8 +373,8 @@
 						</div>
 
 					</div>
-				</div><!--- END COL --> 
-				<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
+				</div>
+				<div class="col-lg-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
 					data-wow-offset="0">
 					<div class="single_service">
 						<div class="card">
@@ -370,7 +393,7 @@
 
 					</div>
 				</div>
-				<div class="col-lg-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
+				<div class="col-lg-4 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
 					data-wow-offset="0">
 					<div class="single_service">
 						<div class="card">
@@ -409,6 +432,35 @@
 				<div class="col-lg-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
 					data-wow-offset="0">
 
+						<p class="subheading mt-3">DAY - 1</p>
+						
+						<div style="text-align: center;" class="section-title">CTF Competition: May 03, 2025 <br>On-site (06 Hours)</div>
+						<div class="gradient-line"></div>
+						<div class="event-content">
+							<div class="event-box">
+								<div class="row">
+									<div class="col-lg-4 col-sm-12 col-xs-12">
+										<div class="time pt-3">🕘 10:00 AM</div>
+									</div>
+									<div class="col-lg-8 col-sm-12 col-xs-12">
+										<div class="tag">Preparation For On-site Contest</div>
+									</div>
+								</div>
+							</div>
+						
+							<div class="event-box">
+								<div class="row">
+									<div class="col-lg-4 col-sm-12 col-xs-12">
+										<div class="time pt-3">🕘 10:00 PM</div>
+									</div>
+									<div class="col-lg-8 col-sm-12 col-xs-12">
+										<div class="tag">Starting of On-site CTF Contest</div>
+									</div>
+								</div>
+							</div>
+
+</div>
+
 					<p class="subheading mt-2">DAY - 2</p>
 
 					<div style="text-align: center;" class="section-title">CTF Competition: May 03, 2025 <br>On-site (06 Hours)</div>
@@ -420,8 +472,8 @@
 									<div class="time pt-3">🕘 9:30 AM</div>
 								</div>
 								<div class="col-lg-8 col-sm-12 col-xs-12">
-									<div class="title">Preparation For On-site Contest</div>
-									<div class="tag">On-site</div>
+									<div class="tag">Preparation For On-site Contest</div>
+									
 								</div>
 							</div>
 						</div>
@@ -432,8 +484,8 @@
 									<div class="time pt-3">🕘 10:00 AM</div>
 								</div>
 								<div class="col-lg-8 col-sm-12 col-xs-12">
-									<div class="title">Starting of On-site CTF Contest</div>
-									<div class="tag">On-site</div>
+									<div class="tag">Starting of On-site CTF Contest</div>
+									
 								</div>
 							</div>
 						</div>
@@ -444,8 +496,8 @@
 									<div class="time pt-3">🕘 1:30 PM </div>
 								</div>
 								<div class="col-lg-8 col-sm-12 col-xs-12">
-									<div class="title">Prayer and Lunch Break</div>
-									<div class="tag">Prayer</div>
+									<div class="tag">Prayer and Lunch Break</div>
+								
 								</div>
 							</div>
 						</div>
@@ -456,8 +508,8 @@
 										<div class="time pt-3">🕘 2:30 PM </div>
 									</div>
 									<div class="col-lg-8 col-sm-12 col-xs-12">
-										<div class="title">Continue CTF Contest</div>
-										<div class="tag">On-site</div>
+										<div class="tag">Continue CTF Contest</div>
+										
 									</div>
 								</div>
 							</div>
@@ -468,8 +520,8 @@
 											<div class="time pt-3">🕘 4:00 PM </div>
 										</div>
 										<div class="col-lg-8 col-sm-12 col-xs-12">
-											<div class="title">End CTF Contest</div>
-											<div class="tag">On-site</div>
+											<div class="tag">End CTF Contest</div>
+											
 										</div>
 									</div>
 								</div>
@@ -892,20 +944,25 @@
 								<input type="text" name="full_name" placeholder="Full Name *" required>
 								<input type="email" name="email" placeholder="Email Address *" required>
 								<input type="text" name="institution" placeholder="Institution/University">
-								<input type="text" name="phone" placeholder="Phone Number">
-								<input type="text" name="team_name" placeholder="Team Name">
-								<select name="event">
-									<option>Capture The Flag</option>
-									<option>Hackathon</option>
+								<input type="number" name="phone" placeholder="Phone Number">
+								<input type="text" name="stident_id" placeholder="Student Id">
+								<select name="T-shirt-Size" placeholder="T-shirt Size">
+									<option >T-shirt Size</option>
+									<option>S</option>
+									<option>M</option>
+									<option>L</option>
+									<option>XL</option>
+									<option>XXL</option>
+									<option>XXXL</option>
 								</select>
-								<input type="text" name="member1" placeholder="Team Member 1">
+								<!-- <input type="text" name="member1" placeholder="Team Member 1">
 								<input type="text" name="size1" placeholder="T-shirt Size Member1">
 								<input type="text" name="member2" placeholder="Team Member 2">
 								<input type="text" name="size2" placeholder="T-shirt Size Member2">
 								<input type="text" name="member3" placeholder="Team Member 3">
 								<input type="text" name="size3" placeholder="T-shirt Size Member3">
 								<input type="text" name="member4" placeholder="Team Member 4">
-								<input type="text" name="size4" placeholder="T-shirt Size Member4">
+								<input type="text" name="size4" placeholder="T-shirt Size Member4"> -->
 								<button type="submit">REGISTER NOW</button>
 							</form>
 						</div>
@@ -964,8 +1021,8 @@
 					<div class="single_footer">
 						<h4>Quick Links</h4>
 						<ul>
-							<li><a href="#about">Event</a></li>
-							<li><a href="#service">Services</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#Event">Event</a></li>
 							<li><a href="#EventSchedule">Schedule</a></li>
 							<li><a href="#teamMember">Team Member</a></li>
 							<li><a href="#Sponsors">Sponsors</a></li>
@@ -1010,7 +1067,7 @@
 	<!-- countTo js -->
 	<script src="assets/js/jquery.inview.min.js"></script>
 	<!-- stellar js -->
-	<script src="assets/js/404.html"></script>
+
 	<!-- scrolltopcontrol js -->
 	<script src="assets/js/scrolltopcontrol.js"></script>
 	<!-- jquery.bubble js -->

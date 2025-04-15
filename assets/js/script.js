@@ -1,69 +1,68 @@
-const countToDate = new Date().setHours(new Date().getHours() + 240);
-let previous;
+document.addEventListener('DOMContentLoaded', () => {
+    const countToDate = new Date().setHours(new Date().getHours() + 240);
+    let previous;
 
-setInterval(() => {
-    const currentDate = new Date();
-    const timeBetweenDates = Math.floor((countToDate - currentDate) / 1000);
-    if (timeBetweenDates !== previous) {
-        flipAllCards(timeBetweenDates);
+    setInterval(() => {
+        const currentDate = new Date();
+        const timeBetweenDates = Math.floor((countToDate - currentDate) / 1000);
+        if (timeBetweenDates !== previous) {
+            flipAllCards(timeBetweenDates);
+        }
+        previous = timeBetweenDates;
+    }, 250);
+
+    function flipAllCards(time) {
+        const days = Math.floor(time / (24 * 3600));
+        const hours = Math.floor((time / 3600) % 24);
+        const minutes = Math.floor((time / 60) % 60);
+        const seconds = Math.floor(time % 60);
+
+        const daysCard = document.querySelector('.days > .flip-card');
+        const hoursCard = document.querySelector('.hours > .flip-card');
+        const minutesCard = document.querySelector('.minutes > .flip-card');
+        const secondsCard = document.querySelector('.seconds > .flip-card');
+
+        if (daysCard) flipCard(daysCard, days);
+        if (hoursCard) flipCard(hoursCard, hours);
+        if (minutesCard) flipCard(minutesCard, minutes);
+        if (secondsCard) flipCard(secondsCard, seconds);
     }
-    previous = timeBetweenDates;
-}, 250);
 
-function flipAllCards(time) {
-    const days = Math.floor(time / (24 * 3600));
-    const hours = Math.floor((time / 3600) % 24);
-    const minutes = Math.floor((time / 60) % 60);
-    const seconds = Math.floor(time % 60);
+    function flipCard(flipCard, time) {
+        time = String(time).padStart(2, '0');
+        const currentValue = flipCard.querySelector('.top').innerText;
 
-    const daysCard = document.querySelector('.days > .flip-card');
-    const hoursCard = document.querySelector('.hours > .flip-card');
-    const minutesCard = document.querySelector('.minutes > .flip-card');
-    const secondsCard = document.querySelector('.seconds > .flip-card');
+        if (time == currentValue) return;
 
-    flipCard(daysCard, days);
-    flipCard(hoursCard, hours);
-    flipCard(minutesCard, minutes);
-    flipCard(secondsCard, seconds);
+        const topFlip = document.createElement('div');
+        topFlip.classList.add('top-flip');
+        topFlip.innerText = currentValue;
 
-}
+        const bottomFlip = document.createElement('div');
+        bottomFlip.classList.add('bottom-flip');
+        bottomFlip.innerText = time;
 
-function flipCard(flipCard, time) {
-    time = String(time).padStart(2, '0');
-    const currentValue = flipCard.querySelector('.top').innerText;
+        const topHalf = flipCard.querySelector('.top');
+        const bottomHalf = flipCard.querySelector('.bottom');
 
-    if (time == currentValue) return;
+        topFlip.addEventListener('animationstart', () => {
+            topHalf.innerText = time;
+        });
 
-    const topFlip = document.createElement('div');
-    topFlip.classList.add('top-flip');
-    topFlip.innerText = currentValue;
+        topFlip.addEventListener('animationend', () => {
+            topFlip.remove();
+        });
 
-    const bottomFlip = document.createElement('div');
-    bottomFlip.classList.add('bottom-flip');
-    bottomFlip.innerText = time;
+        bottomFlip.addEventListener('animationend', () => {
+            bottomHalf.innerText = time;
+            bottomFlip.remove();
+        });
 
-    const topHalf = flipCard.querySelector('.top');
-    const bottomHalf = flipCard.querySelector('.bottom');
+        flipCard.appendChild(topFlip);
+        flipCard.appendChild(bottomFlip);
+    }
 
-    topFlip.addEventListener('animationstart', () => {
-        topHalf.innerText = time;
-    })
-
-    topFlip.addEventListener('animationend', () => {
-        topFlip.remove()
-    });
-
-    bottomFlip.addEventListener('animationend', () => {
-        bottomHalf.innerText = time;
-        bottomFlip.remove()
-    });
-
-    flipCard.appendChild(topFlip);
-    flipCard.appendChild(bottomFlip);
-}
-
-
-(function () {
+    // Second countdown script for May 3rd
     const second = 1000,
         minute = second * 60,
         hour = minute * 60,
@@ -72,13 +71,12 @@ function flipCard(flipCard, time) {
     const today = new Date();
     let targetYear = today.getFullYear();
 
-    // If today is after April 25, countdown to April 25 next year
-    const april25 = new Date(`${targetYear}-04-25T00:00:00`);
-    if (today > april25) {
+    const may3 = new Date(`${targetYear}-05-03T00:00:00`);
+    if (today > may3) {
         targetYear += 1;
     }
 
-    const countDown = new Date(`${targetYear}-04-25T00:00:00`).getTime();
+    const countDown = new Date(`${targetYear}-05-03T00:00:00`).getTime();
 
     const x = setInterval(function () {
         const now = new Date().getTime();
@@ -96,4 +94,4 @@ function flipCard(flipCard, time) {
             clearInterval(x);
         }
     }, 1000);
-})();
+});

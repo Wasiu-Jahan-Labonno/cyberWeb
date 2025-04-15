@@ -83,27 +83,7 @@ Version      : 1.0
 				
 })(jQuery);
 
-/*START MARQUEE JS*/
-	let lastTime = (new Date()).getTime(),
-		currentTime = 0,
-		counter = 0;
 
-		const myScroller1 = new SuperMarquee(
-		  document.getElementById( "supermarquee1" ),
-		  {
-			"content" : "*Access Control Lists* &nbsp &nbsp  *Search Functionalty* &nbsp &nbsp  *legal Disclaimers*  &nbsp &nbsp  *Network Seqmenttation* &nbsp &nbsp  *Feedback & Reporting* &nbsp &nbsp"
-		  }
-		);
-
-	function loop() {
-		window.requestAnimationFrame( loop );
-		currentTime = ( new Date() ).getTime();
-		delta = ( currentTime - lastTime ) / 9000;
-		myScroller4.setPerspective( "{ \"rotateY\" : " + 30 * Math.sin( delta ) + "}" );
-	}
-
-	loop();
-/*END MARQUEE JS*/
 
 
   
