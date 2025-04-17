@@ -1,43 +1,33 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "registration_db";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "event_registration";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
+// Connect to database
+$conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// Prepare and bind
-$stmt = $conn->prepare("INSERT INTO registrations (full_name, email, institution, phone, team_name, event, member1, size1, member2, size2, member3, size3, member4, size4)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssssssssssss",
-  $_POST['full_name'],
-  $_POST['email'],
-  $_POST['institution'],
-  $_POST['phone'],
-  $_POST['team_name'],
-  $_POST['event'],
-  $_POST['member1'],
-  $_POST['size1'],
-  $_POST['member2'],
-  $_POST['size2'],
-  $_POST['member3'],
-  $_POST['size3'],
-  $_POST['member4'],
-  $_POST['size4']
-);
+// Escape and get form data
+$full_name = $conn->real_escape_string($_POST['full_name']);
+$email = $conn->real_escape_string($_POST['email']);
+$institution = $conn->real_escape_string($_POST['institution']);
+$phone = $conn->real_escape_string($_POST['phone']);
+$student_id = $conn->real_escape_string($_POST['stident_id']);
+$tshirt_size = $conn->real_escape_string($_POST['T-shirt-Size']);
 
-if ($stmt->execute()) {
-  echo "Registration successful!";
+// Insert into database
+$sql = "INSERT INTO registrations (full_name, email, institution, phone, student_id, tshirt_size) 
+        VALUES ('$full_name', '$email', '$institution', '$phone', '$student_id', '$tshirt_size')";
+
+if ($conn->query($sql) === TRUE) {
+  // Redirect back with success message
+  header("Location: index.html?success=true");
+  exit();
 } else {
-  echo "Error: " . $stmt->error;
+  echo "Error: " . $conn->error;
 }
 
-$stmt->close();
 $conn->close();
-?>

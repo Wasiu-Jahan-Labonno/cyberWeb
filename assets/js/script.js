@@ -95,3 +95,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 1000);
 });
+
+/*START MARQUEE JS*/
+let lastTime = (new Date()).getTime(),
+    currentTime = 0,
+    counter = 0;
+
+const myScroller1 = new SuperMarquee(
+    document.getElementById("supermarquee1"),
+    {
+        "content": `
+      <img src="assets/img/partner/1.png" alt="Icon1" style="height:50px; vertical-align:middle;"> &nbsp;
+      *CTF partner * &nbsp;&nbsp;
+      <img src="assets/img/partner/Gotmyhost Logo Raw.png" style="height:20px; vertical-align:middle;"> &nbsp;
+      *Hosting partner* &nbsp;&nbsp;
+      <img src="assets/img/partner/2.png" style="height:20px; vertical-align:middle;"> &nbsp;
+      *Outreach Partner*
+    `
+    }
+);
+
+function loop() {
+    window.requestAnimationFrame(loop);
+    currentTime = (new Date()).getTime();
+    let delta = (currentTime - lastTime) / 9000;
+    myScroller1.setPerspective("{ \"rotateY\" : " + 30 * Math.sin(delta) + " }");
+}
+
+loop();
+/* END MARQUEE JS */
+/*END MARQUEE JS*/
