@@ -2523,3 +2523,22 @@ padding: .5%;
 	font-size: 24px;
 	color: #000;
 }
+.round-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #5865F2;
+	/* Discord brand color */
+	color: white;
+	font-size: 18px;
+	text-decoration: none;
+	transition: background 0.3s;
+}
+
+.round-icon:hover {
+	background-color: #404eed;
+	/* Slightly darker on hover */
+}
