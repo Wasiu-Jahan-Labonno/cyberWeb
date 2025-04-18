@@ -107,10 +107,12 @@ const myScroller1 = new SuperMarquee(
         "content": `
       <img src="assets/img/partner/1.png" alt="Icon1" style="height:50px; vertical-align:middle;"> &nbsp;
       *CTF partner * &nbsp;&nbsp;
-      <img src="assets/img/partner/Gotmyhost Logo Raw.png" style="height:20px; vertical-align:middle;"> &nbsp;
+      <img src="assets/img/partner/Gotmyhost Logo Raw.png" style="height:50px; vertical-align:middle;"> &nbsp;
       *Hosting partner* &nbsp;&nbsp;
-      <img src="assets/img/partner/2.png" style="height:20px; vertical-align:middle;"> &nbsp;
+      <img src="assets/img/partner/2.png" style="height:50px; vertical-align:middle;"> &nbsp;
       *Outreach Partner*
+       <img src="assets/img/partner/main_large.png" style="height:50px; vertical-align:middle;"> &nbsp;
+      *Knowledge Partner*
     `
     }
 );

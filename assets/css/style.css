@@ -2034,6 +2034,7 @@ padding: .5%;
 
 .btn:hover {
 	transform: scale(1.03);
+	color: #020202;
 }
 .card .card-content {
 	padding: 20px;
@@ -2480,28 +2481,45 @@ padding: .5%;
 		width: 40%;
 	}
 }
+
+
 .popup {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	padding: 30px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	z-index: 9999;
+	border-radius: 10px;
+	animation: fadeIn 0.5s ease-in-out;
+		color: #000;
 }
-
 .popup-content {
 	background: white;
 	padding: 30px;
 	border-radius: 8px;
 	text-align: center;
+		color: #000;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -45%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
 }
 
 .close-btn {
-	float: right;
-	font-size: 24px;
+	position: absolute;
+	top: 10px;
+	right: 15px;
 	cursor: pointer;
+	font-size: 24px;
+	color: #000;
 }
