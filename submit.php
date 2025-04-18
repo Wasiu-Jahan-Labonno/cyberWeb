@@ -17,10 +17,14 @@ $institution = $conn->real_escape_string($_POST['institution']);
 $phone = $conn->real_escape_string($_POST['phone']);
 $student_id = $conn->real_escape_string($_POST['student_id']);
 $tshirt_size = $conn->real_escape_string($_POST['T-shirt-Size']);
+$bkash_number = $conn->real_escape_string($_POST['bkash_number']);
+
+$transition_id = $conn->real_escape_string($_POST['transition_id']);
+
 
 // Insert into database
-$sql = "INSERT INTO registrations (full_name, email, institution, phone, student_id, tshirt_size) 
-        VALUES ('$full_name', '$email', '$institution', '$phone', '$student_id', '$tshirt_size')";
+$sql = "INSERT INTO registrations (full_name, email, institution, phone, student_id, tshirt_size,bkash_number, transition_id) 
+        VALUES ('$full_name', '$email', '$institution', '$phone', '$student_id', '$tshirt_size','$bkash_number','$transition_id')";
 
 if ($conn->query($sql) === TRUE) {
   // ✅ Redirect to index.html with success flag
