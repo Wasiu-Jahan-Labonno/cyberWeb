@@ -16,7 +16,7 @@ $email = $conn->real_escape_string($_POST['email']);
 $institution = $conn->real_escape_string($_POST['institution']);
 $phone = $conn->real_escape_string($_POST['phone']);
 $student_id = $conn->real_escape_string($_POST['student_id']);
-$tshirt_size = $conn->real_escape_string($_POST['T-shirt-Size']);
+$tshirt_size = $conn->real_escape_string($_POST['tshirt_size']);
 $bkash_number = $conn->real_escape_string($_POST['bkash_number']);
 
 $transition_id = $conn->real_escape_string($_POST['transition_id']);
