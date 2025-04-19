@@ -2142,7 +2142,7 @@ padding: .5%;
 
 .sponsor-card {
 	width: 220px;
-		min-height: 260px;
+		min-height: 200px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

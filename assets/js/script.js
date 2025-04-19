@@ -105,14 +105,34 @@ const myScroller1 = new SuperMarquee(
     document.getElementById("supermarquee1"),
     {
         "content": `
+        *CTF partner * &nbsp;&nbsp;
       <img src="assets/img/partner/1.png" alt="Icon1" style="height:50px; vertical-align:middle;"> &nbsp;
-      *CTF partner * &nbsp;&nbsp;
+       *Hosting partner* &nbsp;&nbsp;
       <img src="assets/img/partner/Gotmyhost Logo Raw.png" style="height:50px; vertical-align:middle;"> &nbsp;
-      *Hosting partner* &nbsp;&nbsp;
+     *Outreach Partner*
       <img src="assets/img/partner/2.png" style="height:50px; vertical-align:middle;"> &nbsp;
-      *Outreach Partner*
+        *Knowledge Partner*
        <img src="assets/img/partner/main_large.png" style="height:50px; vertical-align:middle;"> &nbsp;
-      *Knowledge Partner*
+    
+      *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p1.png" style="height:70px; vertical-align:middle;"> &nbsp;
+       *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p2.png" style="height:70px; vertical-align:middle;"> &nbsp;
+       *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p3.png" style="height:70px; vertical-align:middle;"> &nbsp;
+       *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p4.jpg" style="height:70px; vertical-align:middle;"> &nbsp;
+       *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p5.png" style="height:70px; vertical-align:middle;"> &nbsp;
+       *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p6.png" style="height:70px; vertical-align:middle;"> &nbsp;
+       *Media Partner:* &nbsp;&nbsp;
+      <img src="assets/img/partner/p7.png" style="height:70px; vertical-align:middle;"> &nbsp;
+     
+       *Skill Builder Partner:* &nbsp;&nbsp;
+      <img src="assets/img/partner/p9.png" style="height:70px; vertical-align:middle;"> &nbsp;
+
+
     `
     }
 );
