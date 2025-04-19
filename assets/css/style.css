@@ -2412,7 +2412,7 @@ padding: .5%;
 
 @media (max-width: 600px) {
 	.mgsm {
-		margin-top: 30%;
+		margin-top: 50%;
 	}
 }
 @media (min-width: 850px) {
@@ -2472,7 +2472,7 @@ padding: .5%;
 
 @media (max-width: 600px) {
 	.myDis {
-		width: 40%;
+		width: 80%;
 	}
 }
 
