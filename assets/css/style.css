@@ -2542,3 +2542,12 @@ padding: .5%;
 	background-color: #404eed;
 	/* Slightly darker on hover */
 }
+
+  .gradient-line {
+		display: block;
+			width: 80px;
+			height: 3px;
+			margin: 0 auto 10px;
+			background: linear-gradient(90deg, #00c2ff, #a167ff);
+			border-radius: 2px;
+  }
