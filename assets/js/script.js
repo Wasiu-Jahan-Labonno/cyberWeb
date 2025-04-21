@@ -126,9 +126,14 @@ const myScroller1 = new SuperMarquee(
       <img src="assets/img/partner/p5.png" style="height:70px; vertical-align:middle;"> &nbsp;
        *Club Partners* &nbsp;&nbsp;
       <img src="assets/img/partner/p6.png" style="height:70px; vertical-align:middle;"> &nbsp;
+         *Club Partners* &nbsp;&nbsp;
+      <img src="assets/img/partner/p10.png" style="height:70px; vertical-align:middle;"> &nbsp;
        *Media Partner:* &nbsp;&nbsp;
       <img src="assets/img/partner/p7.png" style="height:70px; vertical-align:middle;"> &nbsp;
-     
+       *Media Partner:* &nbsp;&nbsp;
+      <img src="assets/img/partner/p11.png" style="height:70px; vertical-align:middle;"> &nbsp;
+
+
        *Skill Builder Partner:* &nbsp;&nbsp;
       <img src="assets/img/partner/p9.png" style="height:70px; vertical-align:middle;"> &nbsp;
 
