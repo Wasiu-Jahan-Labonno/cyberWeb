@@ -14,7 +14,7 @@ Version      : 1.0
 		$(window).on('load', function() { 
 			setTimeout(function () {
 				$('.preloaders').fadeOut('fast');
-			}, 100);
+			}, 10);
 		}); 
 		/*END PRELOADER JS*/		
 		
